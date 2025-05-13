@@ -12,7 +12,7 @@ public class App {
 
 
         ArrayList<Libro> libros = new ArrayList<>();
-        persistencia.leerFichero(libros);
+        persistencia.leerFichero(libro);
         
         int opcion;
         do{
@@ -31,10 +31,7 @@ public class App {
                 case 2-> libro.borrarLibro();
                 case 3-> libro.menuBuscar();
                 case 4-> libro.mostrarLibros();
-                case 5-> {
-                    persistencia.escribirLibros(libros);
-                    System.out.println("Saliendo del programa...");
-                }
+                case 5-> System.out.println("Saliendo del programa...");
                 default-> System.out.println("Valor introducido no valido");
             }
         }while(opcion != 5);

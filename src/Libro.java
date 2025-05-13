@@ -22,6 +22,7 @@ public class Libro {
     //Listas
 
     ArrayList <Libro> libros = new ArrayList<>();
+    Persistencia persistencia = new Persistencia();
 
     
     //Gets y sets
@@ -70,6 +71,7 @@ public class Libro {
             System.out.println("Algun dato del los introducidos estan vacios o no son validos");
         }else{
             libros.add(new Libro(titulo, autor, isbn, añoPublicacion));
+            persistencia.escribirLibros(new Libro(titulo, autor, isbn, añoPublicacion));
         }
     }
 
