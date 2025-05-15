@@ -9,6 +9,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         Libro libro = new Libro();
         Persistencia persistencia = new Persistencia();
+        GestionBiblioteca gestionBiblioteca = new GestionBiblioteca();
 
 
         ArrayList<Libro> libros = new ArrayList<>();
@@ -27,10 +28,10 @@ public class App {
             sc.nextLine();
 
             switch(opcion){
-                case 1-> libro.añadirLibro();
-                case 2-> libro.borrarLibro();
-                case 3-> libro.menuBuscar();
-                case 4-> libro.mostrarLibros();
+                case 1-> gestionBiblioteca.añadirLibro();
+                case 2-> gestionBiblioteca.borrarLibro();
+                case 3-> gestionBiblioteca.menuBuscar();
+                case 4-> gestionBiblioteca.mostrarLibros();
                 case 5-> System.out.println("Saliendo del programa...");
                 default-> System.out.println("Valor introducido no valido");
             }
